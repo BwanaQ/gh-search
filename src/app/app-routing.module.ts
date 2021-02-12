@@ -4,11 +4,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
+  { path: '', redirectTo: '/profile', pathMatch: 'full' },
+
   { path: 'profile', component: ProfileComponent },
   { path: 'repository', component: RepositoryComponent },
   { path: '**', component: NotFoundComponent },
-
-  { path: '', redirectTo: '/profile', pathMatch: 'full' },
 ];
 
 @NgModule({
